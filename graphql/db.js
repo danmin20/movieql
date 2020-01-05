@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE_URL = "https://yts.lt/api/v2/";
+const BASE_URL = "https://yts-proxy.now.sh/";
 const LIST_MOVIES_URL = `${BASE_URL}list_movies.json`;
 const MOVIE_DETAILS_URS = `${BASE_URL}movie_details.json`;
 const MOVIE_SUGGESTIONS_URS = `${BASE_URL}movie_suggestions.json`;
@@ -24,7 +24,7 @@ export const getMovie = async id => {
       data: { movie }
     }
   } = await axios(MOVIE_DETAILS_URS, {
-    prams: {
+    params: {
       movie_id: id
     }
   });
